@@ -1,0 +1,24 @@
+import express from "express";
+import cors from "cors";
+
+// the file we will have our routes in:
+import statsbull from "./api/statsbull.route.js";
+
+// using to make our server
+const app = express();
+
+// apply middleware - the things express uses
+app.use(cors());
+
+// this allows server to accept json in the body of a request (GET/POST, read json)
+app.use(express.json());
+
+// initial base route,.... routes
+app.use("/api/statsbull", statsbull);
+
+// wildcard return not found
+app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
+
+// export app as a module
+// import it in the file that accesses the db
+export default app;

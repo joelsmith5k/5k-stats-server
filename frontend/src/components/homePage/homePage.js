@@ -15,7 +15,7 @@ function HomePage() {
 
       <Row>
         <Col>
-          <Container classname="infoContainer">Welcome to StatsBull.</Container>
+          <Container classname="infoContainer">Welcome to 5kstats.</Container>
           <Container classname="infoContainer">
             Built with ReactJS.
           </Container>

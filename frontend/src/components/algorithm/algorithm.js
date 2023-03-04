@@ -33,7 +33,7 @@ function Algorithm() {
           <Container className="descriptionContainer">
             Set the sliding scales to the weight of your preference,
             based on how important you think each stat is this week.
-            Statsbull will recommend a pga golfer for the upcoming event Based on your input.
+            5kStats will recommend a pga golfer for the upcoming event Based on your input.
             <br>
             </br>
             <br>

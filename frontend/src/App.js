@@ -9,7 +9,7 @@ import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import HomePage from "./components/homePage/homePage";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
 
@@ -19,7 +19,7 @@ function App() {
               <Navbar.Brand href="/">
                 <img src={Logo} alt="Logo" />
               </Navbar.Brand>
-              <Navbar.Brand href="/">StatsBull</Navbar.Brand>
+              <Navbar.Brand href="/">5kStats</Navbar.Brand>
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">

@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 
 // the file we will have our routes in:
-import statsbull from "./api/statsbull.route.js";
+import api5kstats from "./api/5kstats.route.js";
 
 // using to make our server
 const app = express();
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 // initial base route,.... routes
-app.use("/api/statsbull", statsbull);
+app.use("/api/5kstats", api5kstats);
 
 // wildcard return not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));

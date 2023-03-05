@@ -9,7 +9,7 @@ dotenv.config();
 const MongoClient = mongodb.MongoClient;
 
 // syntax to access environment variable
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 443;
 
 // connect to db - passs in URI
 MongoClient.connect(process.env.GOLF_DB_URI, {

@@ -19,6 +19,13 @@ app.use("/api/5kstats", api5kstats);
 // wildcard return not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
 
+app.get("*", (req, res) => {
+    let url = path.join(__dirname, '../client/build', 'index.html');
+    if (!url.startsWith('/app/'))
+    url = url.substring(1);
+   res.sendFile(url);
+ });
+
 // export app as a module
 // import it in the file that accesses the db
 export default app;

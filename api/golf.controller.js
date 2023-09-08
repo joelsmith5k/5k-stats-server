@@ -1,5 +1,4 @@
 import GolfDAO from "../dao/golfDAO.js";
-
 export default class GolfController {
 
     static async apiGetTournament(req, res, next) {

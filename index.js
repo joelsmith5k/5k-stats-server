@@ -4,12 +4,13 @@ import app from "./server.js";
 import mongodb from "mongodb";
 import dotenv from "dotenv";
 import GolfDAO from "./dao/golfDAO.js";
+import NhlDAO from "./dao/nhlDAO.js";
 
 dotenv.config();
 const MongoClient = mongodb.MongoClient;
 
 // syntax to access environment variable
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 5000;
 
 // connect to db - passs in URI
 MongoClient.connect(process.env.GOLF_DB_URI, {
@@ -25,6 +26,7 @@ MongoClient.connect(process.env.GOLF_DB_URI, {
     // after connect before start server
     // get reference to DB
     await GolfDAO.injectDB(client);
+    await NhlDAO.injectDB(client);
 
     app.listen(port, () => {
       console.log(`listening on port ${port}`);

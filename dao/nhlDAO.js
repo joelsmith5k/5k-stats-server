@@ -21,8 +21,6 @@ export default class NhlDAO {
         `unable to get nhl aggregates or goalie stats collection in nhlDAO: ${err}`
       );
     }
-
-    console.log("hi");
   }
 
   // get the aggregates - single JSON object

@@ -4,7 +4,6 @@ export default class NhlController {
 
     static async apiGetNhlAggregates(req, res, next) {
         const aggregates = await NhlDAO.apiGetNhlAggregates()
-        console.log(aggregates)
         res.json(aggregates)     
     }
 

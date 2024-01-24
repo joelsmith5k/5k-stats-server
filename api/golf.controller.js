@@ -3,7 +3,6 @@ export default class GolfController {
 
     static async apiGetTournament(req, res, next) {
         const tournament = await GolfDAO.getTournament()
-        console.log(tournament)
         res.json(tournament)     
     }
 

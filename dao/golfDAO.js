@@ -21,8 +21,6 @@ export default class golfDAO {
         `unable to get tournaments or stats collection in tournamentsDAO: ${err}`
       );
     }
-
-    console.log("hi");
   }
 
   // get the next tournament - single JSON object

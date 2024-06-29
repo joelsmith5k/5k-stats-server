@@ -5,8 +5,6 @@ import NhlController from "./nhl.controller.js";
 // access express' router
 const router = express.Router();
 
-// this controller is what the router uses to get data
-// make the home route (demo)
 router.route("/").get((req, res) => res.send("hello world!"));
 
 // golf routes

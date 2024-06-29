@@ -9,10 +9,8 @@ import NhlDAO from "./dao/nhlDAO.js";
 dotenv.config();
 const MongoClient = mongodb.MongoClient;
 
-// syntax to access environment variable
 const port = process.env.PORT || 5000;
 
-// connect to db - passs in URI
 MongoClient.connect(process.env.GOLF_DB_URI, {
   maxPoolSize: 50,
   wtimeoutMS: 250,
@@ -23,8 +21,6 @@ MongoClient.connect(process.env.GOLF_DB_URI, {
     process.exit(1);
   })
   .then(async (client) => {
-    // after connect before start server
-    // get reference to DB
     await GolfDAO.injectDB(client);
     await NhlDAO.injectDB(client);
 

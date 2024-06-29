@@ -1,5 +1,3 @@
-// Data Access Object for tournaments..
-
 import mongodb from "mongodb";
 const ObjectId = mongodb.ObjectId;
 

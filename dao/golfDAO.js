@@ -1,5 +1,3 @@
-// Data Access Object for tournaments..
-
 import mongodb from "mongodb";
 const ObjectId = mongodb.ObjectId;
 
@@ -41,7 +39,7 @@ export default class golfDAO {
     }
   }
 
-  // get the top 50 WGC player stats - as an array of JSON objects
+  // get the top 50 WGC player stats - array of JSON objects
   static async getPlayerStats() {
     let cursor;
     try {

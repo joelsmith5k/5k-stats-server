@@ -7,18 +7,17 @@ import api5kstats from "./api/5kstats.route.js";
 // using to make our server
 const app = express();
 
-// apply middleware - the things express uses
+// apply middleware - express uses
 app.use(cors());
 
-// this allows server to accept json in the body of a request (GET/POST, read json)
+// allows server to accept json in the body of a request (GET/POST, read json)
 app.use(express.json());
 
-// initial base route,.... routes
+// initial base route
 app.use("/api/5kstats", api5kstats);
 
 // wildcard return not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
 
 // export app as a module
-// import it in the file that accesses the db
 export default app;
